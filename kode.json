@@ -38,6 +38,6 @@
     },
     {
       "Command": "executeScript_Sandbox",
-      "Target": "var next = ${nextLine}; if(next > 4){next = 1;} return next;",
+      "Target": "var next = ${nextLine}; if(next > 5){next = 1;} return next;",
       "Value": "!csvReadLineNumber"
     }
