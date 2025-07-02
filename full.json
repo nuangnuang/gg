@@ -30,6 +30,49 @@
         "css=#modalsContainer > div > div > div.cds-modal.cds-modalDefault-m10eqfv6.cds-modal.cds-modalResponsive-m1gh7een > div > div > div.Transitioner__Container-sc-79459e22-0.eZvdEe > div > div > div > div > div.cds-flex-f1tjavv3.cds-column-c1kchipr.cds-0_5-_ey9gyh > div > div > span > input"
       ],
       "Description": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "!csvReadLineNumber",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "1",
+      "Value": "!csvReadLineNumber"
+    },
+    {
+      "Command": "end"
+    },
+    {
+      "Command": "csvRead",
+      "Target": "data.csv",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Loop baris ${!csvReadLineNumber}: ${!col1}",
+      "Value": "#shownotification"
+    },
+    {
+      "Command": "pause",
+      "Target": "500",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/span/input",
+      "Value": "${!col1}"
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number(${!csvReadLineNumber}) + 1;",
+      "Value": "nextLine"
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "var next = ${nextLine}; if(next > 4){next = 1;} return next;",
+      "Value": "!csvReadLineNumber"
     }
   ]
 }
