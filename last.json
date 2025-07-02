@@ -1,0 +1,252 @@
+{
+  "Name": "test3",
+  "CreationDate": "2025-7-2",
+  "Commands": [
+    {
+      "Command": "pause",
+      "Target": "500",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"pageContainer_Column2\"]/div/div/div/div[2]/div/div/div/div/div/button/div/div/div/div/div/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"pageContainer_Column2\"]/div/div/div/div[2]/div/div/div/div/div/button/div/div/div/div/div/span",
+        "xpath=//div[2]/div/div/div/div/div/button/div/div/div/div/div/span",
+        "css=#pageContainer_Column2 > div > div > div > div:nth-child(2) > div > div > div > div:nth-child(1) > div > button > div > div:nth-child(1) > div > div > div > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/span/input",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/span/input",
+        "xpath=//input[@value='' and @type='text']",
+        "xpath=//span/input",
+        "css=#modalsContainer > div > div > div.cds-modal.cds-modalDefault-m10eqfv6.cds-modal.cds-modalResponsive-m1gh7een > div > div > div.Transitioner__Container-sc-79459e22-0.eZvdEe > div > div > div > div > div.cds-flex-f1tjavv3.cds-column-c1kchipr.cds-0_5-_ey9gyh > div > div > span > input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "if",
+      "Target": "${!csvReadLineNumber} == \"\"",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "1",
+      "Value": "!csvReadLineNumber",
+      "Description": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "csvRead",
+      "Target": "data.csv",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Loop baris ${!csvReadLineNumber}: ${!col1}",
+      "Value": "#shownotification",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "500",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/span/input",
+      "Value": "${!col1}",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "var next = Number(${!csvReadLineNumber}) + 1; if(next > 5){next = 1;} return next;",
+      "Value": "nextLine",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "${nextLine}",
+      "Value": "!csvReadLineNumber",
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div[2]/div[2]/div/div/button/div/div[2]/div/div",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div[2]/div[2]/div/div/button/div/div[2]/div/div",
+        "xpath=//div[2]/div/div/button/div/div[2]/div/div",
+        "css=#modalsContainer > div > div > div.cds-modal.cds-modalDefault-m10eqfv6.cds-modal.cds-modalResponsive-m1gh7een > div > div > div.Transitioner__Container-sc-79459e22-0.eZvdEe > div > div > div > div > div.cds-flex-f1tjavv3.cds-column-c1kchipr.cds-scroll-sdy20sw.cds-2-_fik044 > div:nth-child(2) > div.cds-flex-f1tjavv3.cds-relative-r5okg6e > div > button > div > div.cds-flex-f1tjavv3.cds-flex-start-f3vgl1z.cds-cell.cds-baseStyles-b1n4pqsb.cds-cell.cds-truncate-t1bbnpmz > div > div"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "1000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div[2]/div/div/button/div/div[2]/div/div",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div[2]/div/div/button/div/div[2]/div/div",
+        "xpath=//div[2]/div/div/button/div/div[2]/div/div",
+        "css=#modalsContainer > div > div > div.cds-modal.cds-modalDefault-m10eqfv6.cds-modal.cds-modalResponsive-m1gh7een > div > div > div.Transitioner__Container-sc-79459e22-0.eZvdEe > div > div > div > div > div.cds-flex-f1tjavv3.cds-column-c1kchipr.cds-scroll-sdy20sw > div > div > button > div > div.cds-flex-f1tjavv3.cds-flex-start-f3vgl1z.cds-cell.cds-baseStyles-b1n4pqsb.cds-cell.cds-truncate-t1bbnpmz > div > div.cds-typographyResets-t6muwls.cds-headline-h4steop.cds-foreground-f1v7bdxr.cds-transition-t1qvlahm.cds-start-s1u0g7ow.cds-truncate-tpurrmi"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "500",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div/input",
+      "Value": "0.1",
+      "Targets": [
+        "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div/div/div/div/input",
+        "xpath=//input[@value='0.1']",
+        "xpath=//div[2]/div/div/div/div/div/input",
+        "css=#modalsContainer > div > div > div.cds-modal.cds-modalDefault-m10eqfv6.cds-modal.cds-modalResponsive-m1gh7een > div > div > div > div > div > div > div > div.cds-flex-f1tjavv3.cds-column-c1kchipr.cds-3-_10f3bvw.cds-1-_1w0e50j > div.cds-flex-f1tjavv3.cds-center-c14yogr6.cds-center-cqy3t5k > div > div.cds-flex-f1tjavv3.cds-center-c14yogr6.cds-row-r1cf21wt.cds-space-between-s1y044t2.cds-relative-r5okg6e > div > div > input"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "500",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div[2]/button[2]/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div[2]/button[2]/span",
+        "xpath=//button[2]/span",
+        "css=#modalsContainer > div > div > div.cds-modal.cds-modalDefault-m10eqfv6.cds-modal.cds-modalResponsive-m1gh7een > div > div > div > div > div > div > div > div.cds-flex-f1tjavv3.cds-column-c1kchipr.cds-3-_10f3bvw.cds-1-_1w0e50j > div.cds-flex-f1tjavv3.cds-row-r1cf21wt.cds-2-_11ix2s4.cds-2-_1fpvsav.cds-1-_1w0e50j > button.cds-interactable-i17wmk8f.cds-focusRing-f145pgxk.cds-transparent-t1pmzpst.cds-button-b15nm6xx.cds-fullWidth-f10ei5ro.cds-scaledDownState-s1o6alxd.cds-primaryForeground-pd71c0x.cds-button-b1oh4z3j.cds-buttonBlock-b1aolcod.cds-4-_1g6imbc.cds-4-_13srchq > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "500",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/button/div",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/button/div",
+        "xpath=//div[2]/div/div/div/div/div/div[2]/button/div",
+        "css=#modalsContainer > div > div > div.cds-modal.cds-modalDefault-m10eqfv6.cds-modal.cds-modalResponsive-m1gh7een > div > div > div.Transitioner__Container-sc-79459e22-0.eZvdEe > div > div > div > div > div > div.cds-flex-f1tjavv3.cds-column-c1kchipr.cds-1-_zpn1u8.cds-1-_1vh894o.cds-2-_mr0se7 > button:nth-child(1) > div"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "name=isOwnAccount",
+      "Value": "",
+      "Targets": [
+        "id=collapsible-:r69:",
+        "name=isOwnAccount",
+        "xpath=//*[@id=\"collapsible-:r69:\"]",
+        "xpath=//input[@id='collapsible-:r69:']",
+        "xpath=//label/div/div/div/input",
+        "css=#collapsible-:r69:"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "500",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/button",
+        "xpath=//div[2]/div/div/div/div/div/div[2]/button",
+        "css=#modalsContainer > div > div > div.cds-modal.cds-modalDefault-m10eqfv6.cds-modal.cds-modalResponsive-m1gh7een > div > div > div.Transitioner__Container-sc-79459e22-0.eZvdEe > div > div > div > div > div > div.cds-flex-f1tjavv3.cds-column-c1kchipr.cds-2-_fik044 > button"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div[5]/button",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div/div/div/div/div/div[2]/div[5]/button",
+        "xpath=//div[5]/button",
+        "css=#modalsContainer > div > div > div.cds-modal.cds-modalDefault-m10eqfv6.cds-modal.cds-modalResponsive-m1gh7een > div > div > div > div > div > div > div > div:nth-child(2) > div.cds-flex-f1tjavv3.cds-column-c1kchipr.cds-borderedTop-b1vs3soz.cds-2-_fik044.cds-2-_jg634k.cds-3-_m245rc.cds-3-_63shon.cds-2-_mr0se7 > button"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "12000",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/div/button/span/span/span",
+      "Value": "",
+      "Targets": [
+        "xpath=//*[@id=\"modalsContainer\"]/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/div/button/span/span/span",
+        "xpath=//div[2]/div/div/div/div/div/div[2]/div/button/span/span/span",
+        "css=#modalsContainer > div > div > div.cds-modal.cds-modalDefault-m10eqfv6.cds-modal.cds-modalResponsive-m1gh7een > div > div > div.Transitioner__Container-sc-79459e22-0.eZvdEe > div > div > div > div > div > div.statusStyles__StatusFooterContainer-sc-6242bffd-2.hdJOSl > div > button > span > span > span"
+      ],
+      "Description": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "2000",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}
