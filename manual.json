@@ -1,6 +1,6 @@
 {
   "Name": "manual",
-  "CreationDate": "2025-7-3",
+  "CreationDate": "2025-7-5",
   "Commands": [
     {
       "Command": "click",
@@ -15,7 +15,7 @@
     },
     {
       "Command": "pause",
-      "Target": "6000",
+      "Target": "5000",
       "Value": "",
       "Description": ""
     },
@@ -32,7 +32,7 @@
     },
     {
       "Command": "pause",
-      "Target": "2000",
+      "Target": "3000",
       "Value": "",
       "Description": ""
     },
@@ -84,7 +84,7 @@
     },
     {
       "Command": "pause",
-      "Target": "3000",
+      "Target": "2000",
       "Value": "",
       "Description": ""
     },
@@ -138,7 +138,7 @@
     },
     {
       "Command": "pause",
-      "Target": "3000",
+      "Target": "4000",
       "Value": "",
       "Description": ""
     },
@@ -172,7 +172,7 @@
     },
     {
       "Command": "pause",
-      "Target": "3000",
+      "Target": "2000",
       "Value": "",
       "Description": ""
     }
